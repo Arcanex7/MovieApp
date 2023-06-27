@@ -1,0 +1,117 @@
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --p-color : #111111;
+    --s-color : #37369b;
+}
+body{
+    background-color: var(--p-color);
+    font-family: 'Belanosima', sans-serif;
+    color:black;
+
+    margin: 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-family: 'Bruno Ace', sans-serif, cursive;
+    color: white;
+}
+
+
+.srch{
+    background-color:#1c1c1c;
+    border: 2px solid #fff ;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+}
+.srch::placeholder{
+    color: #fff;
+}
+.srch:focus{
+    outline: none;
+    background-color: white;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 240px;
+    margin: 1rem;
+    background-color: #252324;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+}
+.movie:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(207, 0, 7, 0.7), 0 0 20px rgba(207, 0, 7, 0.7), 0 0 40px rgba(207, 0, 7, 0.7), 0 0 80px rgba(207, 0, 7, 0.7);
+}
+
+
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    letter-spacing: 0.45px;
+    padding: 0.5rem;
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+.movie-info span{
+    background-color: #3c3c3c;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+}
+.movie-info span.green{
+   color:#008f28 ;
+}
+.movie-info span.orange{
+   color:#e24b00 ;
+}
+.movie-info span.yellow{
+   color:#cdd100 ;
+}
+.movie-info span.red{
+   color:#d10000 ;
+}
+.overview{
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: all 0.5s ease-in;
+}
+.movie:hover .overview{
+    transform: translateY(0);
+}
